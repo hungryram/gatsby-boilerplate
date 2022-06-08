@@ -1,0 +1,23 @@
+{
+    "company": "",
+    "contact_information": {
+        "name": "",
+        "office": "",
+        "cell": "",
+        "email": "",
+        "address": "",
+        "city": "",
+        "state": "",
+        "zip_code": ""
+    },
+    "social_media": {
+        "instagram": "",
+        "facebook": "",
+        "twitter": "",
+        "pinterest": "",
+        "yelp": "",
+        "linkedin": "",
+        "tiktok": "",
+        "youtube": ""
+    }
+}
