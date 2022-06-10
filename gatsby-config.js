@@ -49,7 +49,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "blog",
-        "path": `${__dirname}/content/blog/`
+        "path": `${__dirname}/src/content/blog/`
       },
       __key: "blog"
     },
@@ -57,7 +57,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "legal",
-        "path": `${__dirname}/content/legal/`
+        "path": `${__dirname}/src/content/legal/`
       },
       __key: "legal"
     },
@@ -65,7 +65,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "content",
-        "path": `${__dirname}/content/pages/`
+        "path": `${__dirname}/src/content/pages/`
       },
       __key: "content"
     },
@@ -73,7 +73,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "services",
-        "path": `${__dirname}/content/services/`
+        "path": `${__dirname}/src/content/services/`
       },
       __key: "services"
     },
@@ -81,7 +81,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "main",
-        "path": `${__dirname}/content/main/`
+        "path": `${__dirname}/src/content/main/`
       },
       __key: "main"
     },

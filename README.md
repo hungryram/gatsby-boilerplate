@@ -1,4 +1,4 @@
-##This is the Gatsby Boilerplate for small business websites.
+## This is the Gatsby Boilerplate for small business websites.
 
 Installed are:
 - React Icon
