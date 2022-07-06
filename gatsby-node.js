@@ -44,19 +44,36 @@ exports.onCreateNode = async ({node, getNode, actions, store, cache, getCache, c
         })  
     }
 
-    // Generate Services Nodes
+    // Generate Portfolio Nodes
 
-    if(node.internal.type === 'File' && node.sourceInstanceName === 'services' && node.base !== '_index.md'){
+    if(node.internal.type === 'File' && node.sourceInstanceName === 'portfolio' && node.base !== '_index.md'){
         const markdownNode = await getNode(node.children[0])
         const slug = createFilePath({ node, getNode, basePath: `pages` })
         createNode({
             ...markdownNode,
-            id: `${node.id}-services`,
+            id: `${node.id}-portfolio`,
             slug: slug,
             parent: node.id,
             children: [`${markdownNode.id}`],
             internal: {
-                type: 'Service',
+                type: 'Portfolio',
+                content: JSON.stringify(markdownNode),
+                contentDigest: createContentDigest(markdownNode)
+            },
+        })  
+    }
+
+    if(node.internal.type === 'File' && node.sourceInstanceName === 'comingsoon' && node.base !== '_index.md'){
+        const markdownNode = await getNode(node.children[0])
+        const slug = createFilePath({ node, getNode, basePath: `pages` })
+        createNode({
+            ...markdownNode,
+            id: `${node.id}-comingsoon`,
+            slug: slug,
+            parent: node.id,
+            children: [`${markdownNode.id}`],
+            internal: {
+                type: 'ComingSoon',
                 content: JSON.stringify(markdownNode),
                 contentDigest: createContentDigest(markdownNode)
             },

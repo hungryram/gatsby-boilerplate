@@ -4,7 +4,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link, StaticQuery, graphql } from "gatsby"
 import { useState } from "react";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function Navbar() {
 
@@ -28,7 +28,7 @@ export default function Navbar() {
             }
             render={data => (
                 <>
-                    <nav className="flex items-center justify-center py-2 bg-white text-black">
+                    <nav className="md:flex items-center justify-center py-5 bg-transparent top-0 z-50 left-0 right-0 text-white absolute md:visible hidden">
                         <ul className="flex items-center">
                             <li className="inline-block mx-5 font-light">
                                 <Link to="/">Home</Link>
@@ -41,14 +41,13 @@ export default function Navbar() {
                             </li>
                             <li className="inline-block mx-5 font-light">
                                 <Link to="/">
-                                <StaticImage
-                                    src="../../images/lionsgrouplogo.webp"
-                                    width="200"
+                                <GatsbyImage
+                                    image={data.appearance.branding.logo.childImageSharp.gatsbyImageData}
                                 />
                                 </Link>
                             </li>
                             <li className="inline-block mx-5 font-light">
-                                <Link to="/coming-soon">Coming Soon</Link>
+                            <Link to="/coming-soon">Coming Soon</Link>
                             </li>
                             <li className="inline-block mx-5 font-light">
                                 <Link to="/about/">About</Link>
@@ -61,17 +60,7 @@ export default function Navbar() {
 
                     <div className="z-50 relative md:hidden">
                         <div className="nav">
-                            <div id="toggle" onClick={() => setActive(!active)}>
-                                {active ? "open" : "close"}
-                            </div>
-                            <div className={active ? "nav-menu" : "nav-menu-active"}>
-                                <ul style={{ listStyle: "none", padding: "0" }}>
-                                    <li>Link 1</li>
-                                    <li>Link 2</li>
-                                    <li>Link 3</li>
-                                    <li>Link 4</li>
-                                </ul>
-                            </div>
+
                         </div>
                     </div>
 

@@ -1,22 +1,21 @@
 {
     "company": "",
     "contact_information": {
-        "name": "",
-        "office": "",
-        "cell": "",
-        "email": "",
-        "address": "",
-        "city": "",
-        "state": "",
-        "zip_code": ""
+        "name": "Lions Group NYC",
+        "phone": "(516) 829-5883",
+        "email": "info@lionsgroupnyc.com",
+        "address": "425 Northern Blvd, Suite #6",
+        "city": "Great Neck",
+        "state": "NY",
+        "zip_code": "11021"
     },
     "social_media": {
         "instagram": "",
-        "facebook": "",
+        "facebook": "https://www.facebook.com/lionsgroupnyc/",
         "twitter": "",
         "pinterest": "",
         "yelp": "",
-        "linkedin": "",
+        "linkedin": "https://www.linkedin.com/company/lions-group-nyc/",
         "tiktok": "",
         "youtube": ""
     }

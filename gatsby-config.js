@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://www.example.com`,
+        siteUrl: `https://www.lionsgroupnyc.com`,
       },
     },
     {
@@ -72,10 +72,18 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "services",
-        "path": `${__dirname}/src/content/services/`
+        "name": "portfolio",
+        "path": `${__dirname}/src/content/portfolio/`
       },
-      __key: "services"
+      __key: "portfolio"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "comingsoon",
+        "path": `${__dirname}/src/content/coming-soon/`
+      },
+      __key: "comingsoon"
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -84,6 +92,13 @@ module.exports = {
         "path": `${__dirname}/src/content/main/`
       },
       __key: "main"
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data/`,
+      },
     },
   ]
 };
